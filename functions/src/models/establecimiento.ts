@@ -3,20 +3,23 @@ export interface Establecimiento {
     name: string,
     description: string,
     quealification: number,
-    ownerName: string
+    ownerName: string,
+    imageURL: string,
+    contactOwner: string,
     
 }
 
 export function Establecimiento(data :any, id?:string){
-    const {name, description, qualification, ownerName  } = data;
+    const {name, description, quealification, ownerName, imageURL , contactOwner} = data;
 
     let object :Establecimiento = { 
         idEstablecimiento: id,
         name: name,                
         description: description,
-        quealification : qualification,
-        ownerName: ownerName
-            
+        quealification : quealification,
+        ownerName: ownerName,
+        imageURL: imageURL,
+        contactOwner: contactOwner,    
     };
     return object;
 }
