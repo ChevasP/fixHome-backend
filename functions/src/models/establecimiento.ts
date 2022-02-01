@@ -6,11 +6,12 @@ export interface Establecimiento {
     ownerName: string,
     imageURL: string,
     contactOwner: string,
+    typeEstablish: string,
     
 }
 
 export function Establecimiento(data :any, id?:string){
-    const {name, description, quealification, ownerName, imageURL , contactOwner} = data;
+    const {name, description, quealification, ownerName, imageURL , contactOwner, typeEstablish} = data;
 
     let object :Establecimiento = { 
         idEstablecimiento: id,
@@ -20,6 +21,7 @@ export function Establecimiento(data :any, id?:string){
         ownerName: ownerName,
         imageURL: imageURL,
         contactOwner: contactOwner,    
+        typeEstablish: typeEstablish,
     };
     return object;
 }
