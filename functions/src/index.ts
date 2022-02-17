@@ -3,7 +3,7 @@ import * as admin from "firebase-admin";
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as cors from "cors";
-import { routesEstablishment, routesServices, routesUser } from "./router";
+import { routelogin, routesEstablishment, routesServices, routesUser } from "./router";
 
 admin.initializeApp(functions.config().firebase);
 const db = admin.firestore();
@@ -18,6 +18,7 @@ server.use(bodyParser.urlencoded({extended: false}));
 routesUser(server);
 routesServices(server);
 routesEstablishment(server);
+routelogin(server);
 
 //exp server
 export {db};
